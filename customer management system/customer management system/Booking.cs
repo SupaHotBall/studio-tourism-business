@@ -1,5 +1,12 @@
 ﻿using System.Collections.Generic;
 using System;
+// --------------------
+// Booking.cs
+// --------------------
+
+/// <summary>
+/// Represents a booking made by a customer. It contains booking details and associated services.
+/// </summary>
 
 namespace customer_management_system
 {
