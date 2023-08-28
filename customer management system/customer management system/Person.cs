@@ -1,4 +1,11 @@
-﻿namespace customer_management_system
+﻿// --------------------
+// Person.cs
+// --------------------
+
+/// <overview>
+/// Represents a generic person with fundamental properties.
+/// </overview>
+namespace customer_management_system
 {
     public class Person
     {
