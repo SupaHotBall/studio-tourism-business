@@ -1,4 +1,11 @@
-﻿namespace customer_management_system
+﻿// --------------------
+// Customer.cs
+// --------------------
+
+/// <overview>
+/// Represents a customer, inheriting basic properties from Person and adding customer-specific details.
+/// </overview>
+namespace customer_management_system
 {
     public class Customer : Person
     {
