@@ -1,0 +1,39 @@
+User Story 1 - Admin
+
+As an admin, I want to be able to log into the application and access authorized information that only the admin should have access to 
+(such as the details of employees and the ability to change the password of the system)
+
+User Story 2 - Business Owner
+
+As a business owner, I want to be able to reset the password of the system if I believe that a privacy breach has occurred or in 
+order to maintain security by regularly changing the password.
+
+User Story 3 - Admin
+
+As an admin, I want to be able to manage the details of and store data regarding my customers as well as update 
+these details when necessary.
+
+User Story 4 - Admin
+
+As an admin, I want to be able to create and store information regarding bookings that customers have made so 
+that it will be easier to organize tours and offer customers discounts based on the timeframe of their bookings.
+
+User Story 5 - Customer
+
+As a customer, I would like to be able to view current bookings that have been made and the booking schedule 
+of the tour agency so that I am able to plan when I would like to go.
+
+User Story 6 - Admin
+
+As an admin, I want to be able to keep track of the ongoing costs and expenses of the business 
+(such as how much it costs per trip to hire vans and camera equipment) and be able to store this information in the system.
+
+User Story 7 - Developer
+
+As a developer, I want all information in the system to be stored in a text file format and be able to read data 
+from these text files or edit the data in them in order to ensure a safe and optimal way to store information.
+
+User Story 8 - Admin
+
+As an admin, I want to be able to have a simple interface to navigate through - similar to a spreadsheet system; 
+which will display data regarding various aspects of the business such as customers, tours available and financial information.
