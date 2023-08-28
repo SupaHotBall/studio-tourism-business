@@ -1,4 +1,12 @@
-﻿namespace customer_management_system
+﻿// --------------------
+// Service.cs
+// --------------------
+
+/// <overview>
+/// Represents an additional service or amenity a customer might request during booking.
+/// Examples include camera rentals, printouts, etc.
+/// </overview>
+namespace customer_management_system
 {
     public class Service
     {
