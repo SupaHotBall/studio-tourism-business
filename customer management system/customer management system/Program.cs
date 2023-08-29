@@ -1,16 +1,18 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
 
 namespace customer_management_system
 {
     internal class Program
     {
-        private const string correctpassword = "forstaffonly";
+        private const string CorrectPassword = "forstaffonly";
+
         static void Main(string[] args)
         {
-            authentication();
-            
+            Authentication();
+        }
+
+        public static void Menu()
+        {
             int userInput;
             string temp;
 
@@ -33,7 +35,7 @@ namespace customer_management_system
 
             Console.WriteLine("Type the number of the feature you would like to use and hit Enter");
 
-           do
+            do
             {
                 temp = Console.ReadLine();
                 userInput = Convert.ToInt32(temp);
@@ -77,32 +79,25 @@ namespace customer_management_system
                         Console.WriteLine("Please enter a valid number and try again");
                         break;
                 }
-
             } while (userInput < 1 || userInput > 11);
         }
-        public static void authentication()
+
+        public static void Authentication()
         {
             Console.WriteLine("Welcome to the Password Authentication System!");
 
-            if (AuthenticateUser())
+            Console.Write("Enter the password: ");
+            string enteredPassword = Console.ReadLine();
+
+            if (enteredPassword == CorrectPassword)
             {
                 Console.WriteLine("Authentication successful. Welcome!");
+                Menu();
             }
             else
             {
                 Console.WriteLine("Authentication failed.");
             }
         }
-
-        private static bool AuthenticateUser()
-        {
-            Console.Write("Enter the password: ");
-            string enteredPassword = Console.ReadLine();
-
-            return enteredPassword == correctpassword;
-        }
-
-
     }
 }
-
