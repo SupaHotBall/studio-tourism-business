@@ -18,5 +18,11 @@ namespace customer_management_system
                 return new Customer(int.Parse(parts[0]), parts[1], parts[2]);
             }).ToList();
         }
+        public static void SaveCustomersToFile(List<Customer> customers)
+        {
+        var lines = customers.Select(c => $"{c.CustomerId},{c.Name},{c.PhoneNumber}");
+        File.WriteAllLines(FilePath, lines);
+        }
     }
+
 }
