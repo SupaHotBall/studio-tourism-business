@@ -1,12 +1,16 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 
 namespace customer_management_system
 {
     internal class Program
     {
+        private const string correctpassword = "forstaffonly";
         static void Main(string[] args)
         {
+            authentication();
+            
             int userInput;
             string temp;
 
@@ -75,12 +79,30 @@ namespace customer_management_system
                 }
 
             } while (userInput < 1 || userInput > 11);
-            
-            
-
-            
-
-
         }
+        public static void authentication()
+        {
+            Console.WriteLine("Welcome to the Password Authentication System!");
+
+            if (AuthenticateUser())
+            {
+                Console.WriteLine("Authentication successful. Welcome!");
+            }
+            else
+            {
+                Console.WriteLine("Authentication failed.");
+            }
+        }
+
+        private static bool AuthenticateUser()
+        {
+            Console.Write("Enter the password: ");
+            string enteredPassword = Console.ReadLine();
+
+            return enteredPassword == correctpassword;
+        }
+
+
     }
 }
+
