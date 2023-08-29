@@ -76,12 +76,6 @@ namespace customer_management_system
                 }
 
             } while (userInput < 1 || userInput > 11);
-            
-            
-
-            
-
-
         }
     }
 }
