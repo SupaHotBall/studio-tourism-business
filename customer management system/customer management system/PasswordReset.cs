@@ -16,6 +16,7 @@ namespace customer_management_system
             this.email = email;
         }
 
+        //properties
         public string Username1 { get => username; set => username = value; }
         public string Email1 { get => email; set => email = value; }
         public string NewPassword1 { get => newPassword; set => newPassword = value; }
