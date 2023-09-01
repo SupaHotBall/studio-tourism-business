@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace customer_management_system
 {
-    internal partial class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
