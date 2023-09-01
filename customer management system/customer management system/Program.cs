@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace customer_management_system
 {
-    internal class Program
+    internal partial class Program
     {
         static void Main(string[] args)
         {
@@ -75,12 +75,10 @@ namespace customer_management_system
                 }
 
             } while (userInput < 1 || userInput > 11);
-            
-            
-
-            
 
 
-        }
+
+
+    }
     }
 }
