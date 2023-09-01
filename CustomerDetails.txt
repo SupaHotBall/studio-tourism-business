@@ -1,0 +1,5 @@
+John,Doe,6 Cat Street,0218768574,None
+Tommy,Shelby,9 Dog Street,0236547876,Asthma
+Jane,Doe,6 Cat Street,0281947264,High Blood Pressure
+Abraham,Lincoln,2 Bird Street,0298768574,Vampirism
+Lisa,Pink,9 Fish Street,02165748374,None
