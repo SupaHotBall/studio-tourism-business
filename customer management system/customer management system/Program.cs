@@ -113,15 +113,15 @@ namespace customer_management_system
             }
 
              Console.WriteLine("Customer Details:\n");
+             Console.WriteLine("FirstName".PadRight(15) + "LastName".PadRight(15) + "Address".PadRight(15) + "PhoneNumber".PadRight(15) + "Allergies\n".PadRight(15));
 
             foreach (Customer customer in customers)
             {
-                Console.WriteLine($"First Name: {customer.FirstName}");
-                Console.WriteLine($"Last Name: {customer.LastName}");
-                Console.WriteLine($"Address: {customer.Address}");
-                Console.WriteLine($"Phone Number: {customer.PhoneNumber}");
-                Console.WriteLine($"Allergies: {customer.Allergies}");
-
+                Console.Write(customer.FirstName.PadRight(15));
+                Console.Write(customer.LastName.PadRight(15));
+                Console.Write(customer.Address.PadRight(15));
+                Console.Write(customer.PhoneNumber.PadRight(15));
+                Console.WriteLine(customer.Allergies.PadRight(15));
             }
         }
     }
