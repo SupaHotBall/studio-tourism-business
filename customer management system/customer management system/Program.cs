@@ -112,7 +112,7 @@ namespace customer_management_system
 
             }
 
-             Console.WriteLine("Customer Details:\n");
+             Console.WriteLine("=============================== Customer Details ================================ \n");
              Console.WriteLine("FirstName".PadRight(15) + "LastName".PadRight(15) + "Address".PadRight(15) + "PhoneNumber".PadRight(15) + "Allergies\n".PadRight(15));
 
             foreach (Customer customer in customers)
@@ -123,6 +123,9 @@ namespace customer_management_system
                 Console.Write(customer.PhoneNumber.PadRight(15));
                 Console.WriteLine(customer.Allergies.PadRight(15));
             }
+
+            Console.WriteLine();
+            Console.WriteLine("================================================================================= \n");
         }
     }
 }
