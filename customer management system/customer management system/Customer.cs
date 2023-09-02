@@ -19,10 +19,6 @@
                 Allergies = allergies;
             }
         }
-
-
-
-
     
     }
 }
