@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
+using System.IO;
 
 namespace customer_management_system
 {
@@ -37,8 +40,11 @@ namespace customer_management_system
                 switch (userInput)
                 {
                     case 1:
+                        Console.Clear();
+                        DisplayCustomerDetails();
 
                         break;
+
                     case 2:
 
                         break;
@@ -79,6 +85,44 @@ namespace customer_management_system
 
 
 
+        }
+
+        public static void DisplayCustomerDetails()
+        {
+            List<Customer> customers = new List<Customer>();            
+
+            string[] lines = File.ReadAllLines("CustomerDetails.txt");
+
+            foreach (string line in lines)
+            {
+                string[] fields = line.Split(',');
+
+                if (fields.Length == 5)
+                {
+                    string firstName = fields[0];
+                    string lastName = fields[1];
+                    string address = fields[2];
+                    string phoneNumber = fields[3];
+                    string allergies = fields[4];
+
+                    Customer newCustomer = new Customer(firstName, lastName, address, phoneNumber, allergies);
+                    customers.Add(newCustomer);
+
+                }
+
+            }
+
+             Console.WriteLine("Customer Details:\n");
+
+            foreach (Customer customer in customers)
+            {
+                Console.WriteLine($"First Name: {customer.FirstName}");
+                Console.WriteLine($"Last Name: {customer.LastName}");
+                Console.WriteLine($"Address: {customer.Address}");
+                Console.WriteLine($"Phone Number: {customer.PhoneNumber}");
+                Console.WriteLine($"Allergies: {customer.Allergies}");
+
+            }
         }
     }
 }
