@@ -235,19 +235,45 @@ namespace customer_management_system
             string userInput3;
             string userInput4;
             string userInput5;
+            string userInput6;
+            string userInputConfirm;
 
-            Console.WriteLine("==============================");
-            Console.WriteLine("Update customer's first name ==");
-            userInput = Console.ReadLine();
-            Console.WriteLine("Update customer's last name ===");
-            userInput2 = Console.ReadLine();
-            Console.WriteLine("Update customer's address =====");
-            userInput3 = Console.ReadLine();
-            Console.WriteLine("Update customer's number ======");
-            userInput4 = Console.ReadLine();
-            Console.WriteLine("Update customer's allergies ===");
-            userInput5 = Console.ReadLine();
-            Console.WriteLine("==============================\n");
+            Console.WriteLine("Enter the ID of the customer that you would like to update");
+            userInput6 = Console.ReadLine();
+
+            string[] existingCustomers = File.ReadAllLines("CustomerDetails.txt");
+            bool customerFound = false;
+
+            List<string> updatedCustomerDetails = new List<string>();
+
+            foreach (string line in existingCustomers)
+            {
+                string[] fields = line.Split(',');
+
+                if (fields[0] == userInput6)
+                {
+                    customerFound = true;
+
+                    Console.WriteLine();
+
+
+                    Console.WriteLine("==============================");
+                    Console.WriteLine("Update customer's first name ==");
+                    userInput = Console.ReadLine();
+                    Console.WriteLine("Update customer's last name ===");
+                    userInput2 = Console.ReadLine();
+                    Console.WriteLine("Update customer's address =====");
+                    userInput3 = Console.ReadLine();
+                    Console.WriteLine("Update customer's number ======");
+                    userInput4 = Console.ReadLine();
+                    Console.WriteLine("Update customer's allergies ===");
+                    userInput5 = Console.ReadLine();
+                    Console.WriteLine("==============================\n");
+                }
+
+            }
+
+            
 
         }
     }
