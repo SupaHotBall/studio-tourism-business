@@ -46,6 +46,8 @@ namespace customer_management_system
                         break;
 
                     case 2:
+                        Console.Clear();
+                        AddCustomerDetails();
 
                         break;
                     case 3:
@@ -150,6 +152,18 @@ namespace customer_management_system
             userInput4 = Console.ReadLine();
             Console.WriteLine("Enter customer's allergies:");
             userInput5 = Console.ReadLine();
+
+            using (StreamWriter sw = File.AppendText("CustomerDetails.txt"))
+            {
+                sw.WriteLine($"{userInput},{userInput2},{userInput3},{userInput4},{userInput5}");
+            }
+
+            Console.WriteLine("Customer details have been successfully added");
+            Console.WriteLine("Press Enter to return to the Main Menu");
+
+            Console.ReadKey();
+            Console.Clear();
+
         }
     }
 }
