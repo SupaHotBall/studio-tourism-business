@@ -99,26 +99,28 @@ namespace customer_management_system
             {
                 string[] fields = line.Split(',');
 
-                if (fields.Length == 5)
+                if (fields.Length == 6)
                 {
-                    string firstName = fields[0];
-                    string lastName = fields[1];
-                    string address = fields[2];
-                    string phoneNumber = fields[3];
-                    string allergies = fields[4];
+                    string customerID = fields[0];
+                    string firstName = fields[1];
+                    string lastName = fields[2];
+                    string address = fields[3];
+                    string phoneNumber = fields[4];
+                    string allergies = fields[5];
 
-                    Customer newCustomer = new Customer(firstName, lastName, address, phoneNumber, allergies);
+                    Customer newCustomer = new Customer(customerID, firstName, lastName, address, phoneNumber, allergies);
                     customers.Add(newCustomer);
 
                 }
 
             }
 
-             Console.WriteLine("=============================== Customer Details ================================ \n");
-             Console.WriteLine("FirstName".PadRight(15) + "LastName".PadRight(15) + "Address".PadRight(15) + "PhoneNumber".PadRight(15) + "Allergies\n".PadRight(15));
+             Console.WriteLine("=============================== Customer Details ================================================ \n");
+             Console.WriteLine("Customer ID".PadRight(15) + "FirstName".PadRight(15) + "LastName".PadRight(15) + "Address".PadRight(15) + "PhoneNumber".PadRight(15) + "Allergies\n".PadRight(15));
 
             foreach (Customer customer in customers)
             {
+                Console.Write(customer.CustomerID.PadRight(15));
                 Console.Write(customer.FirstName.PadRight(15));
                 Console.Write(customer.LastName.PadRight(15));
                 Console.Write(customer.Address.PadRight(15));
@@ -127,7 +129,7 @@ namespace customer_management_system
             }
 
             Console.WriteLine();
-            Console.WriteLine("================================================================================= \n");
+            Console.WriteLine("================================================================================================ \n");
             Console.WriteLine("Press Enter to return to the Main Menu");
 
             Console.ReadKey();
@@ -189,6 +191,24 @@ namespace customer_management_system
 
         public static void UpdateCustomerDetails()
         {
+            string userInput;
+            string userInput2;
+            string userInput3;
+            string userInput4;
+            string userInput5;
+
+            Console.WriteLine("==============================");
+            Console.WriteLine("Update customer's first name ==");
+            userInput = Console.ReadLine();
+            Console.WriteLine("Update customer's last name ===");
+            userInput2 = Console.ReadLine();
+            Console.WriteLine("Update customer's address =====");
+            userInput3 = Console.ReadLine();
+            Console.WriteLine("Update customer's number ======");
+            userInput4 = Console.ReadLine();
+            Console.WriteLine("Update customer's allergies ===");
+            userInput5 = Console.ReadLine();
+            Console.WriteLine("==============================\n");
 
         }
     }
