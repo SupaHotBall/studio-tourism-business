@@ -154,21 +154,36 @@ namespace customer_management_system
             userInput4 = Console.ReadLine();
             Console.WriteLine("Enter customer's allergies ===");
             userInput5 = Console.ReadLine();
-            Console.WriteLine("==============================");
+            Console.WriteLine("==============================\n");
 
-            Console.WriteLine("Are you sure these details are correct?\n");
+            Console.WriteLine("Are you sure these details are correct? Enter Y or N.\n");
             userInputConfirm = Console.ReadLine();
 
-            using (StreamWriter sw = File.AppendText("CustomerDetails.txt"))
+            if (userInputConfirm == "Y")
             {
-                sw.WriteLine($"{userInput},{userInput2},{userInput3},{userInput4},{userInput5}");
+
+                using (StreamWriter sw = File.AppendText("CustomerDetails.txt"))
+                {
+                    sw.WriteLine($"{userInput},{userInput2},{userInput3},{userInput4},{userInput5}");
+                }
+
+                Console.WriteLine("\nCustomer details have been successfully added.");
+                Console.WriteLine("Press Enter to return to the Main Menu.");
+
+                Console.ReadKey();
+                Console.Clear();
+
             }
 
-            Console.WriteLine("Customer details have been successfully added");
-            Console.WriteLine("Press Enter to return to the Main Menu");
+            else
+            {
+                Console.WriteLine("\nCustomer details have not been added.");
+                Console.WriteLine("Press Enter to return to the Main Menu.");
 
-            Console.ReadKey();
-            Console.Clear();
+                Console.ReadKey();
+                Console.Clear();
+            }
+            
 
         }
     }
