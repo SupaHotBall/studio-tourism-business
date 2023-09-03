@@ -141,17 +141,23 @@ namespace customer_management_system
             string userInput3;
             string userInput4;
             string userInput5;
+            string userInputConfirm;  
 
-            Console.WriteLine("Enter customer's first name:");
+            Console.WriteLine("==============================");
+            Console.WriteLine("Enter customer's first name ==");
             userInput = Console.ReadLine();
-            Console.WriteLine("Enter customer's last name:");
+            Console.WriteLine("Enter customer's last name ===");
             userInput2 = Console.ReadLine();
-            Console.WriteLine("Enter customer's address:");
+            Console.WriteLine("Enter customer's address =====");
             userInput3 = Console.ReadLine();
-            Console.WriteLine("Enter customer's phone number:");
+            Console.WriteLine("Enter customer's number ======");
             userInput4 = Console.ReadLine();
-            Console.WriteLine("Enter customer's allergies:");
+            Console.WriteLine("Enter customer's allergies ===");
             userInput5 = Console.ReadLine();
+            Console.WriteLine("==============================");
+
+            Console.WriteLine("Are you sure these details are correct?\n");
+            userInputConfirm = Console.ReadLine();
 
             using (StreamWriter sw = File.AppendText("CustomerDetails.txt"))
             {
