@@ -186,5 +186,10 @@ namespace customer_management_system
             
 
         }
+
+        public static void UpdateCustomerDetails()
+        {
+
+        }
     }
 }
