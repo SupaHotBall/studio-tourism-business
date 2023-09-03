@@ -11,8 +11,6 @@ namespace customer_management_system
         static void Main(string[] args)
         {
             int userInput;
-            string temp;
-
 
            do
             {
@@ -136,11 +134,22 @@ namespace customer_management_system
 
         public static void AddCustomerDetails()
         {
-            int userInput;
-            string temp;
+            string userInput;
+            string userInput2;
+            string userInput3;
+            string userInput4;
+            string userInput5;
 
             Console.WriteLine("Enter customer's first name:");
-            userInput = Convert.ToInt32(Console.ReadLine());
+            userInput = Console.ReadLine();
+            Console.WriteLine("Enter customer's last name:");
+            userInput2 = Console.ReadLine();
+            Console.WriteLine("Enter customer's address:");
+            userInput3 = Console.ReadLine();
+            Console.WriteLine("Enter customer's phone number:");
+            userInput4 = Console.ReadLine();
+            Console.WriteLine("Enter customer's allergies:");
+            userInput5 = Console.ReadLine();
         }
     }
 }
