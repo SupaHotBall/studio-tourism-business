@@ -37,8 +37,7 @@ namespace customer_management_system
 
                 Console.WriteLine("Type the number of the feature you would like to use and hit Enter");
 
-                temp = Console.ReadLine();
-                userInput = Convert.ToInt32(temp);
+                userInput = Convert.ToInt32(Console.ReadLine());
 
                 switch (userInput)
                 {
@@ -133,6 +132,15 @@ namespace customer_management_system
 
             Console.ReadKey();
             Console.Clear();
+        }
+
+        public static void AddCustomerDetails()
+        {
+            int userInput;
+            string temp;
+
+            Console.WriteLine("Enter customer's first name:");
+            userInput = Convert.ToInt32(Console.ReadLine());
         }
     }
 }
