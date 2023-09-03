@@ -143,9 +143,48 @@ namespace customer_management_system
             string userInput3;
             string userInput4;
             string userInput5;
-            string userInputConfirm;  
+            string userInput6;
+            string userInputConfirm;
+            bool uniqueID = false;
 
-            Console.WriteLine("==============================");
+            
+            do
+            {
+
+                Console.WriteLine("==============================");
+                Console.WriteLine("Enter a new customer id number ==");
+                userInput6 = Console.ReadLine();
+
+                string[] existingID = File.ReadAllLines("CustomerDetails.txt");
+                bool idExists = false;
+
+                foreach (string line in existingID)
+                {
+                    string[] fields = line.Split(',');
+
+                    if (fields[0] == userInput6)
+                    {
+                        idExists = true;
+                        break;
+                    }
+                }
+
+                if (idExists)
+                {
+                    Console.WriteLine("This ID has already been assigned to an existing customer. Please enter a unique ID and try again.");
+                }
+
+                else
+                {
+
+                    uniqueID = true;
+
+                }
+
+            } while (!uniqueID);
+            
+
+
             Console.WriteLine("Enter customer's first name ==");
             userInput = Console.ReadLine();
             Console.WriteLine("Enter customer's last name ===");
