@@ -51,7 +51,8 @@ namespace customer_management_system
 
                         break;
                     case 3:
-
+                        Console.Clear();
+                        UpdateCustomerDetails();
                         break;
                     case 4:
 
@@ -277,15 +278,40 @@ namespace customer_management_system
                     userInput5 = Console.ReadLine();
                     Console.WriteLine("===========================================================\n");
 
-                    Console.WriteLine("Are these details correct?");
+                    Console.WriteLine("Are these details correct? Enter Y/N");
                     userInputConfirm = Console.ReadLine();
 
+                    if (userInputConfirm == "Y")
+                    {
+
+                        fields[1] = userInput;
+                        fields[2] = userInput2;
+                        fields[3] = userInput3;
+                        fields[4] = userInput4;
+                        fields[5] = userInput5;
+
+                        updatedCustomerDetails.Add(string.Join(",", fields));
+                        Console.WriteLine("\nCustomer details have been successfully updated.");
+
+                    }
+
+                    else
+                    {
+                        updatedCustomerDetails.Add(string.Join(",", fields));
+                    }
                     
+                }
+
+                else
+                {
+                    updatedCustomerDetails.Add(line);
                 }
 
             }
 
-            
+            File.WriteAllLines("CustomerDetails.txt", updatedCustomerDetails);
+
+
 
         }
     }
