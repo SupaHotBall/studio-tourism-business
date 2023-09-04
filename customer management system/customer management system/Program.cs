@@ -254,10 +254,17 @@ namespace customer_management_system
                 {
                     customerFound = true;
 
-                    Console.WriteLine();
+                    Console.WriteLine("===========================================================");
+                    Console.WriteLine("Is this the customer's details that you wish to update?");
 
+                    Console.WriteLine($"ID: {fields[0]}");
+                    Console.WriteLine($"First Name: {fields[1]}");
+                    Console.WriteLine($"Last Name: {fields[2]}");
+                    Console.WriteLine($"Address: {fields[3]}");
+                    Console.WriteLine($"Phone Number: {fields[4]}");
+                    Console.WriteLine($"Allergies: {fields[5]}");
+                    Console.WriteLine("===========================================================");
 
-                    Console.WriteLine("==============================");
                     Console.WriteLine("Update customer's first name ==");
                     userInput = Console.ReadLine();
                     Console.WriteLine("Update customer's last name ===");
@@ -268,7 +275,12 @@ namespace customer_management_system
                     userInput4 = Console.ReadLine();
                     Console.WriteLine("Update customer's allergies ===");
                     userInput5 = Console.ReadLine();
-                    Console.WriteLine("==============================\n");
+                    Console.WriteLine("===========================================================\n");
+
+                    Console.WriteLine("Are these details correct?");
+                    userInputConfirm = Console.ReadLine();
+
+                    
                 }
 
             }
