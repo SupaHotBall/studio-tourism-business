@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -79,3 +79,4 @@ namespace customer_management_system
         }
     }
 }
+
