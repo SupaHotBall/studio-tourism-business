@@ -1,71 +1,81 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace customer_management_system
 {
-    internal class Program
+    internal partial class Program
     {
         static void Main(string[] args)
         {
-            string input;
-            do
+            int userInput;
+            string temp;
+
+            Console.WriteLine("Main Menu\n");
+
+            Console.WriteLine("1. Display customer details");
+            Console.WriteLine("2. Add customer details");
+            Console.WriteLine("3. Update customer details");
+            Console.WriteLine("4. Remove customer details\n");
+
+            Console.WriteLine("5. View bookings");
+            Console.WriteLine("6. Add a booking");
+            Console.WriteLine("7. Update booking");
+            Console.WriteLine("8. Delete booking\n");
+
+            Console.WriteLine("9. View monthly expenses");
+            Console.WriteLine("10. Add a new expense\n");
+
+            Console.WriteLine("11. Change system password\n");
+
+            Console.WriteLine("Type the number of the feature you would like to use and hit Enter");
+
+           do
             {
-                Console.Clear();
-                Console.WriteLine("Enter what display you want to be: ");
-                input = Console.ReadLine();
-                Console.WriteLine("");
-                Console.WriteLine("1. Tours information");
-                Console.WriteLine("2. Items to rent");
-                Console.WriteLine("1. Calendar");
-                Console.WriteLine("2. Adding customer to a calender");
-                Console.WriteLine("3. Removing customer to a calender");
-                Console.WriteLine("")
+                temp = Console.ReadLine();
+                userInput = Convert.ToInt32(temp);
 
-                switch (input)
+                switch (userInput)
                 {
-                    case "1":
-                        Display();
-                        break;
+                    case 1:
 
-                    case "2":
-                        Task2();
                         break;
+                    case 2:
 
-                    case "3":
-                        Task3();
                         break;
+                    case 3:
 
-                    case "4":
-                        Task4();
                         break;
+                    case 4:
 
-                    case "5":
-                        Task5();
                         break;
+                    case 5:
 
-                    case "6":
-                        Task6();
                         break;
+                    case 6:
 
-                    case "7":
-                        Task7();
                         break;
+                    case 7:
 
-                    case "n":
-                        Console.WriteLine("Exiting the display");
                         break;
+                    case 8:
 
+                        break;
+                    case 9:
+
+                        break;
+                    case 10:
+
+                        break;
+                    case 11:
+
+                        break;
                     default:
-                        Console.WriteLine("Invalid input. Please enter a number between 1 to 10 or n for quit");
+                        Console.WriteLine("Please enter a valid number and try again");
                         break;
                 }
-                Console.WriteLine();
 
-            } while (input != "n");
-        }
-        public void Display()
-        {
-
+            } while (userInput < 1 || userInput > 11);
         }
     }
 }
